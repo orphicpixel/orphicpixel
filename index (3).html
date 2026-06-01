@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OrphicPixel.com — a premium web design, graphic design, photography, and WordPress blog is now for sale. Over a decade of curated creative content. Make an offer today." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="OrphicPixel.com — Premium Creative Blog For Sale" />
+  <meta property="og:description" content="A well-established creative blog covering Web Design, Graphic Design, Photography, and WordPress. Now available for acquisition." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.orphicpixel.com" />
+  <title>OrphicPixel.com — This Website Is For Sale</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0d0d0d;
+      --paper:     #f5f0e8;
+      --cream:     #ede8dc;
+      --accent:    #c94a2b;
+      --accent2:   #e8a44a;
+      --muted:     #7a7060;
+      --border:    #ccc5b0;
+      --white:     #fffdf8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Noise texture overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .5;
+    }
+
+    /* ── HEADER BADGE ── */
+    .for-sale-ribbon {
+      background: var(--accent);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      animation: slideDown .6s ease both;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative grid lines */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: .35;
+    }
+
+    /* Large ghost text */
+    .hero-ghost {
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(90px, 20vw, 240px);
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--border);
+      letter-spacing: -.02em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      opacity: .5;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+      animation: fadeUp .7s .2s ease both;
+    }
+    .eyebrow::before,
+    .eyebrow::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      margin-bottom: 12px;
+      animation: fadeUp .7s .35s ease both;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .domain-badge {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'DM Mono', monospace;
+      font-size: clamp(.85rem, 2vw, 1.15rem);
+      letter-spacing: .06em;
+      padding: 10px 22px;
+      border-radius: 4px;
+      margin: 20px 0 32px;
+      animation: fadeUp .7s .5s ease both;
+    }
+
+    .hero-desc {
+      font-size: clamp(.95rem, 2vw, 1.15rem);
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 48px;
+      animation: fadeUp .7s .65s ease both;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      animation: fadeUp .7s .8s ease both;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 500;
+      padding: 15px 36px;
+      border-radius: 4px;
+      letter-spacing: .04em;
+      transition: transform .18s ease, box-shadow .18s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.14); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .divider-icon {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    /* ── ABOUT SECTION ── */
+    section { padding: 80px 24px; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 960px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .about-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .about-left p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ── STATS ── */
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.07); }
+    .stat-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .stat-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-card p {
+      font-size: .88rem;
+      color: var(--muted);
+    }
+
+    /* ── TOPICS ── */
+    .topics-section {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .topics-section .section-label { color: var(--accent2); }
+
+    .topics-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .topics-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 48px;
+      line-height: 1.2;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .topic-chip {
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .9rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      transition: border-color .2s, background .2s;
+    }
+    .topic-chip:hover {
+      border-color: var(--accent2);
+      background: rgba(232,164,74,.08);
+    }
+    .topic-chip .chip-icon { font-size: 1.4rem; }
+
+    /* ── OFFER SECTION ── */
+    .offer-section {
+      background: var(--cream);
+    }
+    .offer-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .offer-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .offer-inner h2 span { color: var(--accent); font-style: italic; }
+    .offer-inner p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 500px;
+      margin: 0 auto 32px;
+    }
+
+    .email-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      background: var(--white);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+    .email-box a {
+      text-decoration: none;
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-size: clamp(.8rem, 2.5vw, 1rem);
+      padding: 14px 20px;
+      letter-spacing: .03em;
+    }
+    .email-box .copy-btn {
+      background: var(--ink);
+      color: var(--white);
+      border: none;
+      padding: 14px 18px;
+      cursor: pointer;
+      font-size: .85rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: .05em;
+      transition: background .2s;
+    }
+    .email-box .copy-btn:hover { background: var(--accent); }
+
+    .offer-note {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 30px;
+    }
+    .offer-note h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .offer-note ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .offer-note ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+    .offer-note ul li::before {
+      content: '→';
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 36px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      color: var(--muted);
+    }
+    footer a { color: var(--ink); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--ink);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-size: .8rem;
+      letter-spacing: .08em;
+      padding: 12px 24px;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      z-index: 1000;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-100%); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .topics-grid { grid-template-columns: 1fr 1fr; }
+      .email-box { flex-direction: column; }
+      .email-box .copy-btn { width: 100%; }
+    }
+    @media (max-width: 420px) {
+      .topics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFS3TNBD53"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PFS3TNBD53');
+</script>
+</head>
+<body>
+
+  <!-- Top ribbon -->
+  <div class="for-sale-ribbon" role="banner">
+    🏷️ &nbsp; Acquisition Opportunity &nbsp;·&nbsp; This Domain &amp; Website Is Now For Sale
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-ghost" aria-hidden="true">PIXEL</div>
+    <div class="hero-inner">
+      <p class="eyebrow">Premium Digital Asset</p>
+      <h1>A Creative <em>Legacy</em><br>Up for Grabs</h1>
+      <div class="domain-badge">www.orphicpixel.com</div>
+      <p class="hero-desc">
+        Founded in 2009, OrphicPixel is a 16-year-old creative blog covering Web Design, Graphic Design, Photography, WordPress, and more. An aged domain with deep SEO equity — now available for acquisition.
+      </p>
+      <div class="cta-group">
+        <a href="mailto:orphicpixel@gmail.com?subject=Offer%20for%20OrphicPixel.com&body=Hi%2C%20I'm%20interested%20in%20acquiring%20OrphicPixel.com.%20My%20offer%20is%3A" class="btn btn-primary">Make an Offer</a>
+        <a href="#about" class="btn btn-secondary">Learn More ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-icon">✦</span></div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about" aria-label="About OrphicPixel">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <p class="section-label">About the Website</p>
+        <h2>Online since 2009 — a creative institution built over <em style="font-style:italic;color:var(--accent)">16+ years</em></h2>
+        <p>
+          Founded on <strong>May 14, 2009</strong>, OrphicPixel has been a trusted destination for designers, developers, and creative professionals for over 16 years. That kind of domain age is rare — and in SEO, it's gold. Search engines treat aged domains with established histories as far more authoritative than new ones, giving your content a head-start competitors simply can't buy.
+        </p>
+        <p>
+          With more than a decade and a half of evergreen content on Web Design, Graphic Design, Photography, WordPress, and Featured Artists, the domain carries real weight — indexed pages, accumulated backlinks, and organic search equity that has compounded since the Obama era of the internet.
+        </p>
+        <p>
+          Whether you're looking to expand a media portfolio, rebrand an existing creative platform, or simply acquire a powerful aged domain with an active content library, OrphicPixel is a turnkey opportunity that's taken 16 years to build.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="stat-card reveal">
+          <div class="stat-icon">📝</div>
+          <div>
+            <h3>100s</h3>
+            <p>of published articles, tutorials, and design showcases across multiple creative categories</p>
+          </div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:.1s">
+          <div class="stat-icon">🎨</div>
+          <div>
+            <h3>Multi-Niche</h3>
+            <p>Web Design, Graphic Design, WordPress, Photography, Freebies, Tutorials &amp; more</p>
+          </div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:.2s">
+          <div class="stat-icon">🔍</div>
+          <div>
+            <h3>16+ Yrs</h3>
+            <p>Aged domain founded May 14, 2009 — with deep backlink history, indexed content, and organic authority built over 16+ years</p>
+          </div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:.3s">
+          <div class="stat-icon">⚙️</div>
+          <div>
+            <h3>WordPress</h3>
+            <p>Fully operational WordPress-powered site — easy to transfer and immediately usable</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-icon">✦</span></div>
+
+  <!-- ── TOPICS ── -->
+  <section class="topics-section" aria-label="Content categories">
+    <div class="topics-inner">
+      <p class="section-label reveal">Content Categories</p>
+      <h2 class="reveal">What comes with<br>the website</h2>
+      <div class="topics-grid">
+        <div class="topic-chip reveal">
+          <span class="chip-icon">🖥️</span> Web Design
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.05s">
+          <span class="chip-icon">🎨</span> Graphic Design
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.1s">
+          <span class="chip-icon">📷</span> Photography
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.15s">
+          <span class="chip-icon">🔷</span> WordPress
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.2s">
+          <span class="chip-icon">🎁</span> Freebies
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.25s">
+          <span class="chip-icon">📖</span> Tutorials
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.3s">
+          <span class="chip-icon">🖨️</span> Print Design
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.35s">
+          <span class="chip-icon">⭐</span> Featured Artists
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.4s">
+          <span class="chip-icon">📈</span> SEO Articles
+        </div>
+        <div class="topic-chip reveal" style="transition-delay:.45s">
+          <span class="chip-icon">📱</span> Android &amp; iOS
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OFFER ── -->
+  <section class="offer-section" id="offer" aria-label="Make an offer">
+    <div class="offer-inner">
+      <p class="section-label reveal">Ready to Acquire?</p>
+      <h2 class="reveal">Name your <span>price.</span></h2>
+      <p class="reveal">
+        If you see the value in OrphicPixel and want to make it yours, reach out with your offer. All serious inquiries welcome.
+      </p>
+
+      <div class="email-box reveal" role="group" aria-label="Contact email">
+        <a href="mailto:orphicpixel@gmail.com?subject=Offer%20for%20OrphicPixel.com">orphicpixel@gmail.com</a>
+        <button class="copy-btn" onclick="copyEmail()" aria-label="Copy email address">Copy</button>
+      </div>
+
+      <div class="offer-note reveal">
+        <h4>What to include in your email</h4>
+        <ul>
+          <li>Your name or company and what you plan to do with the site</li>
+          <li>Your offer amount (USD preferred)</li>
+          <li>Any questions about traffic, content, or technical setup</li>
+          <li>Preferred timeline for transfer and handover</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>
+      &copy; OrphicPixel &nbsp;·&nbsp;
+      <a href="https://www.orphicpixel.com">www.orphicpixel.com</a> &nbsp;·&nbsp;
+      Inquiries: <a href="mailto:orphicpixel@gmail.com">orphicpixel@gmail.com</a>
+    </p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">Email copied to clipboard ✓</div>
+
+  <script>
+    // Copy email
+    function copyEmail() {
+      navigator.clipboard.writeText('orphicpixel@gmail.com').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
+      });
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
